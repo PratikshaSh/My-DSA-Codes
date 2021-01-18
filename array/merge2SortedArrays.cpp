@@ -1,5 +1,5 @@
 //gap algorithm
-//O(1) space
+//O(1) space and O(nlogn) time
 //////gap =  ceiling of n/2
 #include<bits/stdc++.h>
 using namespace std;
