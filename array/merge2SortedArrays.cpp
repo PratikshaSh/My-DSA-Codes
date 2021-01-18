@@ -1,6 +1,6 @@
 //gap algorithm
 //The intuition behind this is SHELL SORT
-//O(1) space and O(nlogn) time
+///O(1) space and O(nlogn) time
 //////gap =  ceiling of n/2
 #include<bits/stdc++.h>
 using namespace std;
