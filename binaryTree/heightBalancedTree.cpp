@@ -1,5 +1,5 @@
 //abs(left.height- right.height)<=1 at every node
-
+//recursive
 
 #include<iostream>
 #include "binaryTreeNode.h"
