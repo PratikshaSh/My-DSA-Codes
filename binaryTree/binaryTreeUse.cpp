@@ -85,6 +85,22 @@ void inorder(BinaryTreeNode<int>* root){
     cout<<root->data<<" ";
     inorder(root->right); 
 }
+void postorder(BinaryTreeNode<int>* root){
+    if(root == NULL)
+     return;
+    postorder(root->left);
+    postorder(root->right); 
+    cout<<root->data<<" ";
+}
+void preorder(BinaryTreeNode<int>* root){
+    if(root == NULL)
+     return;
+     
+    cout<<root->data<<" ";
+    preorder(root->left);
+    preorder(root->right); 
+}
+
 BinaryTreeNode<int>* buildTreeHelper(int* in, int* pre, int inS,int inE, int preS, int preE){
     if(inS>inE)
      return NULL;
