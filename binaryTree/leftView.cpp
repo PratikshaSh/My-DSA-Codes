@@ -7,7 +7,7 @@
 using namespace std;
 
 
-void printRightView(BinaryTreeNode<int>* root, int level,int& maxLevel){
+void printleftView(BinaryTreeNode<int>* root, int level,int& maxLevel){
     if(root == NULL){
         return;
     }
@@ -19,9 +19,9 @@ void printRightView(BinaryTreeNode<int>* root, int level,int& maxLevel){
     }
 
 //left
-printRightView(root->left , level+1, maxLevel);
+printleftView(root->left , level+1, maxLevel);
 //right
-printRightView(root->right , level+1, maxLevel);
+printleftView(root->right , level+1, maxLevel);
 
 }
 
@@ -64,6 +64,6 @@ BinaryTreeNode<int>* takeInputLevelWise(){
 int main(){
 BinaryTreeNode<int>* root = takeInputLevelWise();
 int level=0;
-cout<<root->data<<" ";
-printRightView(root,0,level);
+
+printleftView(root,1,level);
 }
