@@ -64,6 +64,6 @@ BinaryTreeNode<int>* takeInputLevelWise(){
 int main(){
 BinaryTreeNode<int>* root = takeInputLevelWise();
 int level=0;
-cout<<root->data<<" ";
-printRightView(root,0,level);
+
+printRightView(root,1,level);
 }
