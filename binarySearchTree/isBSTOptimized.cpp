@@ -49,15 +49,29 @@ bool isBST3(Node* root, int minV = INT_MIN , int maxV=INT_MAX){
     }
     return false;
 }
+//using constraints
+//O(n)
+bool isBST4(Node* root, int min=INT_MIN, int max = INT_MAX){
+    if(root==NULL)
+     return true;
 
+    if(root->data<min or root->data >max)
+     return false; 
+
+    bool isLeftOk =isBST4(root->left, min, root->data - 1);
+    bool isRightOk = isBST4(root->right, root->data,max) ;
+
+    return isLeftOk and isRightOk;
+}
 
 
 int main(){
     Node *root = new Node(5);
-    root->left = new Node(10);
+    root->left = new Node(2);
     root->right = new Node(6);
     IsBSTReturn res= isBST2(root);
     cout<<res.isBST<<endl;
-    cout<<isBST3(root);
+    cout<<isBST3(root)<<endl;
+    cout<<isBST4(root);
 
 }
