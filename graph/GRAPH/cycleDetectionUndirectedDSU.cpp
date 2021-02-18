@@ -68,10 +68,21 @@ class Graph{
             }
             else{
                // cout<<"same parents"<<s1<<" and"<<s2<<endl;
-                return true;
+               return true;
             }
         }
+    //to view parent and rank array
+    for(int i=0;i<V;i++){
+        cout<<parent[i]<<" ";
+    }
+    cout<<endl;
+    for(int i =0;i<V;i++){
+        cout<<rank[i]<<" ";
+    }
+    cout<<endl;
+
     delete [] parent;
+    delete [] rank;
     return false;
     }
     
@@ -79,11 +90,18 @@ class Graph{
 };
 
 int main(){
-    Graph g(4);
+    Graph g(7);
+    g.addEdge(0,1);
     g.addEdge(1,2);
     g.addEdge(2,3);
-    g.addEdge(3,0);
-//    g.addEdge(0,1);
+    g.addEdge(0,4);
+    g.addEdge(5,6);
+    g.addEdge(2,5);
+    //g.addEdge(2,6);
+
+
+
+
 
   cout<< g.contains_cycle()<<endl;
    
