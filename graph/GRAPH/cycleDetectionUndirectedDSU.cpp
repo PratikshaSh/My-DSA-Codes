@@ -21,7 +21,8 @@ class Graph{
         if(parent[i]==-1){
             return i;
         }
-        return findSet(parent[i], parent);
+        //path Compression optimization
+        return parent[i]= findSet(parent[i], parent);
     }
 
     //Union
