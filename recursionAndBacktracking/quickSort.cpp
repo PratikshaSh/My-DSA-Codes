@@ -1,6 +1,6 @@
 //D & C
-//O(nlogn) on avg case
-//O(n2) worst case
+//O(nlogn) on avg case - partitioning at the middle always
+//O(n2) worst case - at beginning(asc) or end always(desc)
 #include<iostream>
 using namespace std;
 
@@ -18,7 +18,7 @@ int partition(int *a, int s , int e){
         while(a[j]>pivot){
             j--;
         };
-        
+
         if(i<j){
             swap(a[i], a[j]);
         }
