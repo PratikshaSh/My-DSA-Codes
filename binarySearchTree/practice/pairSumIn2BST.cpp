@@ -39,7 +39,7 @@ int MycountPairs(Node* root1, Node* root2, int x){
     stack<Node*> s2;
     util1(root1, s1);
     util2(root2, s2);
-  ;
+  
 
     int count = 0;
      
